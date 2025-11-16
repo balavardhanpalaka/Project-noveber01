@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>View Gallery — Project J</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1 class="brand">Shared Gallery</h1>
+      <p class="tag">Enter a share code or open a link to view someone's gallery</p>
+    </header>
+
+    <section class="card">
+      <div class="row">
+        <input id="code-input" placeholder="Enter share code (e.g. ABC123)" />
+        <button id="open-btn" class="btn">Open</button>
+      </div>
+    </section>
+
+    <section id="shared-gallery" class="card hidden">
+      <h2>Gallery</h2>
+      <div id="shared-items" class="grid"></div>
+    </section>
+
+    <footer class="footer muted">Enjoy the memories ✨</footer>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+  <script src="viewer.js"></script>
+</body>
+</html>

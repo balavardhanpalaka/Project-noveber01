@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project J — Romantic Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-decor"></div>
+
+  <main class="container">
+    <header class="header">
+      <h1 class="brand">Project J — My Romantic Gallery</h1>
+      <p class="tag">Fill it with BTS, Batman, and beautiful memories ✨</p>
+    </header>
+
+    <section id="gate" class="card">
+      <h2>Enter DOP to continue</h2>
+      <p class="muted">This website is protected by your DOP. Enter it to upload/view your gallery.</p>
+      <input id="dop-input" placeholder="Enter your DOP (secret code or date)" />
+      <div class="row">
+        <button id="enter-btn" class="btn">Enter</button>
+        <button id="create-btn" class="btn alt">Create new DOP</button>
+      </div>
+    </section>
+
+    <section id="uploader" class="card hidden">
+      <h2>Create / Upload</h2>
+      <p class="muted">Upload images or videos and add captions. When you're done, create a share code.</p>
+
+      <label class="filelabel">
+        Select image or video
+        <input id="file-input" type="file" accept="image/*,video/*" />
+      </label>
+
+      <label>
+        Caption
+        <input id="caption-input" placeholder="Write a sweet caption..." />
+      </label>
+
+      <div class="row">
+        <button id="upload-btn" class="btn">Upload file</button>
+        <button id="finish-btn" class="btn alt">Generate share code</button>
+      </div>
+
+      <div id="upload-status" class="muted small"></div>
+
+      <div id="my-code" class="card small hidden">
+        <strong>Share code:</strong> <span id="code-text"></span>
+        <div class="muted small">Share this code or this link with friends:</div>
+        <a id="share-link" href="#">Open gallery link</a>
+      </div>
+    </section>
+
+    <section id="gallery" class="card hidden">
+      <h2>Your uploads</h2>
+      <div id="items" class="grid"></div>
+    </section>
+
+    <footer class="footer muted">
+      Built for love — add BTS, Batman posters, or anything beautiful. Remember to respect copyrights.
+    </footer>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
